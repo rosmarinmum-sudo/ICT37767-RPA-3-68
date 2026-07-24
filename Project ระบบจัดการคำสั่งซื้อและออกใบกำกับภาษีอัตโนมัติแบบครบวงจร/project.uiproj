@@ -1,0 +1,6 @@
+{
+  "Name": "Project ระบบจัดการคำสั่งซื้อและออกใบกำกับภาษีอัตโนมัติแบบครบวงจร",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

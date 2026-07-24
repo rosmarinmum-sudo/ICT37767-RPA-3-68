@@ -1,0 +1,596 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1129.2,8943.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMessages" />
+      <Variable x:TypeArguments="x:Int32" Name="CurrenMail" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtProducts" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtCustomer" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="True" DeleteMessages="False" DisplayName="Get IMAP Email List" Email="mintorders.glowskin@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="827.2,174.4" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[mailMessages]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Password="jvgb qwwb jpjx lqlo" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" UseISConnection="False" UseOAuth="False">
+      <ui:GetIMAPMailMessages.ConnectionDetailsBackupSlot>
+        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="IntegrationService" Capacity="1">
+              <x:Null />
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="LegacyConfiguration" Capacity="9">
+              <x:Null />
+              <x:Null />
+              <x:Null />
+              <x:Null />
+              <x:Null />
+              <x:Null />
+              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              <x:Null />
+              <x:Null />
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </ui:GetIMAPMailMessages.ConnectionDetailsBackupSlot>
+    </ui:GetIMAPMailMessages>
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="827.2,491.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mailMessages]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="snm:MailMessage">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="483.2,360.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Process Email" sap:VirtualizedContainerService.HintSize="449.6,300.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="snm:MailMessage" Name="CurrenIndex" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:SaveMailAttachments Attachments="{x:Null}" ResourceAttachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="False" Filter=".*\.xlsx" FolderPath="D:\project RPA\Inbox" sap:VirtualizedContainerService.HintSize="416,217.6" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentMailMessage]" OverwriteExisting="False" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:ForEachFileX DisplayName="For Each Excel Order File" Filter="*.xlsx" Folder="D:\project RPA\Inbox" sap:VirtualizedContainerService.HintSize="827.2,8254.4" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX.Body>
+        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="793.6,7968" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Process One Order " sap:VirtualizedContainerService.HintSize="760,7908" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="StockText" />
+                <Variable x:TypeArguments="x:Int32" Default="0" Name="AvailableStock" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard AutoSave="False" CreateNewFile="False" DisplayName="Read Order Excel" sap:VirtualizedContainerService.HintSize="726.4,1629.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[currentFile.FullName]">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1401.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="sd:DataTable" Name="dtCustomer" />
+                        <Variable x:TypeArguments="sd:DataTable" Name="dtProducts" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Sales Order&quot;).Range(&quot;A12&quot;)]" SaveTo="[dtCustomer]" VisibleOnly="False" />
+                      <ueab:ReadCellValueX SaveTo="{x:Null}" Cell="[Excel.Sheet(&quot;Sales Order&quot;).Cell(&quot;B4&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1" />
+                      <ueab:ReadCellValueX SaveTo="{x:Null}" Cell="[Excel.Sheet(&quot;Sales Order&quot;).Cell(&quot;B5&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2" />
+                      <ueab:ReadCellValueX Cell="{x:Null}" SaveTo="{x:Null}" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3" />
+                      <ueab:ReadCellValueX Cell="{x:Null}" SaveTo="{x:Null}" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4" />
+                      <ueab:ReadCellValueX Cell="{x:Null}" SaveTo="{x:Null}" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="ReadCellValueX_5" />
+                      <ueab:ReadCellValueX Cell="{x:Null}" SaveTo="{x:Null}" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="ReadCellValueX_6" />
+                      <ueab:ReadCellValueX Cell="{x:Null}" SaveTo="{x:Null}" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="416,160" sap2010:WorkflowViewState.IdRef="ReadCellValueX_7" />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome GlowSkin — Product Catalog" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="726.4,5633.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="02561402-29e4-4105-ae9b-73aa3073220e" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="724.8,5430.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Int32" Default="0" Name="CurrentIndex" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Process Products" sap:VirtualizedContainerService.HintSize="691.2,3120" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtProducts]" DisplayName="For Each Product" sap:VirtualizedContainerService.HintSize="657.6,3028" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow.Body>
+                            <ActivityAction x:TypeArguments="sd:DataRow">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="656,2855.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Search Verify and Add Product" sap:VirtualizedContainerService.HintSize="622.4,2795.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT productSearch'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="588.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Version="V5">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="localhost/invoice_system.html" ContentHash="dXBWx_6UZUmbE38fj5XhnA" DesignTimeRectangle="634, 343, 542, 60" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='productSearch' tag='INPUT' /&gt;" Guid="8054d495-4e6f-45e6-aa19-305cec5ebe96" InformativeScreenshot="4ef78233b30ddfe1f27d1f07a32ccf58.jpg" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/Lrhj43Hh-EOoy0t1PhWn9Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT productSearch'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="588.8,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Text="[CurrentRow(&quot;Product Name&quot;).ToString]" Version="V5">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="localhost/invoice_system.html" ContentHash="dXBWx_6UZUmbE38fj5XhnA" DesignTimeRectangle="634, 343, 542, 60" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='productSearch' tag='INPUT' /&gt;" Guid="8054d495-4e6f-45e6-aa19-305cec5ebe96" InformativeScreenshot="4ef78233b30ddfe1f27d1f07a32ccf58.jpg" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/Lrhj43Hh-EOoy0t1PhWn9Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <uix:NTypeInto.VerifyOptions>
+                                      <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      </uix:VerifyExecutionTypeIntoOptions>
+                                    </uix:NTypeInto.VerifyOptions>
+                                  </uix:NTypeInto>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="588.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Version="V5">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="localhost/invoice_system.html" ContentHash="0TkjsF3FB0eU2tSwECcVyg" DesignTimeRectangle="1174, 343, 111, 60" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='searchButton' tag='BUTTON' /&gt;" Guid="e1b7fd5e-ecc8-40dc-a45b-55babdca6aff" InformativeScreenshot="2a3f06c938157f325b19f8f1c4288906.jpg" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/CslDwL0e-0OECdR4sR21OA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="588.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                  <uix:NCheckState DisplayName="Check Product Found" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="588.8,1956.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Version="V5">
+                                    <uix:NCheckState.IfExists>
+                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="587.2,1447.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Sequence DisplayName="Product Found" sap:VirtualizedContainerService.HintSize="553.6,1387.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="TextString" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NGetText DisplayName="Get Text 'Vitamin C Serum'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,142.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" TextString="[TextString]" Version="V5">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable BrowserURL="localhost/invoice_system.html" DesignTimeRectangle="170, 669, 341, 52" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='H3' innertext='&quot; + CurrentRow(&quot;Product Name&quot;).ToString + &quot;*' /&gt;&quot;]" Guid="eb2a60da-81e0-42b0-b27d-8f6540c304e8" InformativeScreenshot="5444c70e68e20538c6da3799c7f448a7.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                            </uix:NGetText.Target>
+                                          </uix:NGetText>
+                                          <Assign sap:VirtualizedContainerService.HintSize="520,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[StockText]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[TextString.Trim]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <If Condition="[AvailableStock &gt;= CInt(CurrentRow(&quot;Quantity&quot;))]" sap:VirtualizedContainerService.HintSize="520,987.2" sap2010:WorkflowViewState.IdRef="If_1">
+                                            <If.Then>
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="518.4,684" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Sequence DisplayName="Add Product Quantity" sap:VirtualizedContainerService.HintSize="484.8,624" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Add Required Quantity" sap:VirtualizedContainerService.HintSize="451.2,540.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                                    <ui:InterruptibleWhile.Body>
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,419.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Version="V5">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="localhost/invoice_system.html" DesignTimeRectangle="454, 847, 50, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;html app='chrome.exe' /&gt;&lt;webctrl tag='DIV' attr:data-product='&quot; &amp; CurrentRow(&quot;Product Name&quot;).ToString &amp; &quot;' /&gt;&lt;webctrl tag='BUTTON' aaname='+' /&gt;&quot;]" Guid="5bd92765-f486-46d1-a4e7-685db35b3b04" InformativeScreenshot="00ae9299dbe66562ae3d132d6a9fe7db.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">[CurrentIndex]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">[CurrentIndex + 1]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </ui:InterruptibleWhile.Body>
+                                                    <ui:InterruptibleWhile.Condition>
+                                                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="CurrentIndex &lt; CInt(CurrentRow(&quot;Quantity&quot;))" />
+                                                    </ui:InterruptibleWhile.Condition>
+                                                  </ui:InterruptibleWhile>
+                                                </Sequence>
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="518.4,173.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Throw DisplayName="Throw Insufficient Stock" Exception="[New BusinessRuleException(&quot;Stock ไม่เพียงพอสำหรับสินค้า: &quot; &amp; CurrentRow(&quot;Product Name&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                        </Sequence>
+                                      </Sequence>
+                                    </uix:NCheckState.IfExists>
+                                    <uix:NCheckState.IfNotExists>
+                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="587.2,173.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Throw DisplayName="Throw Product Not Found" Exception="[New BusinessRuleException(&quot;ไม่พบสินค้า: &quot; &amp; CurrentRow(&quot;Product Name&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                      </Sequence>
+                                    </uix:NCheckState.IfNotExists>
+                                    <uix:NCheckState.Target>
+                                      <uix:TargetAnchorable BrowserURL="localhost/invoice_system.html" ContentHash="IR6DggM2zk23ogNuIV6Lrw" DesignTimeRectangle="135, 423, 412, 502" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl parentid='productGrid' tag='DIV' innertext='&quot; + CurrentRow(&quot;Product Name&quot;).ToString + &quot;*' /&gt;&quot;]" Guid="7affe562-886d-4563-8acb-37c6334f0dd0" InformativeScreenshot="6623b2939ce9e77f4d673d567371400d.jpg" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/Rx12xf2KJk-uivM2WyxEQw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NCheckState.Target>
+                                  </uix:NCheckState>
+                                </Sequence>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEachRow.Body>
+                        </ui:ForEachRow>
+                      </Sequence>
+                      <Sequence DisplayName="Checkout and Generate Invoice" sap:VirtualizedContainerService.HintSize="691.2,2250.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Proceed to Order'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/invoice_system.html" ContentHash="3DWp3E9QlEORtWY_Lxlw7A" DesignTimeRectangle="1447, 1060, 287, 68" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btnProceed' tag='BUTTON' /&gt;" Guid="c6c8719a-614f-4548-8e92-bb4684347d94" InformativeScreenshot="43b103f90ffce0c921537bce52a001e2.jpg" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/tA8-M4ia_k-L3mTLzCdWjg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Customer Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Text="[dtCustomer.Rows(0)(&quot;Customer Name&quot;).ToString]" Version="V5">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/customer_info.html" ContentHash="C9JT5MCkO06YjxAuufZgeQ" DesignTimeRectangle="493, 423, 457, 57" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='customerName' tag='INPUT' type='text' class='form-control' placeholder='e.g. Somchai Jaidee' aaname='Customer Name' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f1cc4ec8-ecc5-4e1b-b078-342c45deeaae" InformativeScreenshot="755b74352eb7ac665ac045d04a82d624.jpg" IsResponsive="True" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/QEs6qcDLq0y6Lx96brspUQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Customer Information' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="493, 387, 129, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='form-label' aaname='Customer Name' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Customer Name' /&gt;" Guid="64e5a50a-14a1-4b28-b2e3-caeb02146554" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Company Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="SameAsCard" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Text="[dtCustomer.Rows(0)(&quot;Company Name&quot;).ToString]" Version="V5">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/customer_info.html" ContentHash="XtulKRvSt0StfH3LAc_cUA" DesignTimeRectangle="970, 423, 456, 57" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='companyName' tag='INPUT' type='text' class='form-control' placeholder='e.g. Beauty Trading Co., Ltd.' aaname='Company Name' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="ae16862e-0c0b-4e66-8bbf-f6b198a51032" InformativeScreenshot="b807c0c2389e9debc9d87b08116a70b9.jpg" IsResponsive="True" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/CRND4kd4iUKFq7cmqVu9yQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Customer Information' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="970, 387, 127, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Company Name' /&gt;" Guid="049e678c-4c98-4a81-8671-43f973451c5b" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="SameAsCard" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Text="[dtCustomer.Rows(0)(&quot;Address&quot;).ToString]" Version="V5">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/customer_info.html" ContentHash="fMGm4tWpn0yW81r_l0XR4g" DesignTimeRectangle="493, 539, 933, 57" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='customerAddress' tag='INPUT' type='text' class='form-control' placeholder='e.g. 123 Sukhumvit Rd., Khlong Toei, Bangkok 10110' aaname='Address' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="3ffdd08f-9884-428c-a2aa-edb3288c8cf2" InformativeScreenshot="4fc0776e53c47cb6a096d9c16948af45.jpg" IsResponsive="True" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/hHUKF1p8u0SvAJ8mIJ08Aw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Customer Information' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="493, 503, 64, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Address' /&gt;" Guid="861055b4-c8e1-4f97-b198-5f4a92712d28" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Phone Number'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Text="[dtCustomer.Rows(0)(&quot;Phone Number&quot;).ToString]" Version="V5">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/customer_info.html" ContentHash="i-L_l3huwkGUiZdjZ_rQ4g" DesignTimeRectangle="493, 655, 457, 57" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='phone' tag='INPUT' type='text' class='form-control' placeholder='02-123-4567' aaname='Phone Number' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="99690ee8-dc2c-4c7f-a1fb-b6b428af7ae7" InformativeScreenshot="cff03d13bd14d7f015ba9f7e98b8e17a.jpg" IsResponsive="True" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/7Dre1bozv0O4j3Nfar_Bpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Customer Information' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="493, 619, 121, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Phone Number' /&gt;" Guid="b80ec531-35f8-4796-a780-8045abd9870c" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Tax ID (13 digits)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="SameAsCard" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Text="[dtCustomer.Rows(0)(&quot;Tax ID&quot;).ToString]" Version="V5">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/customer_info.html" ContentHash="TX40_tDjn0KXXrkmSyg6XQ" DesignTimeRectangle="970, 655, 456, 57" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='taxId' tag='INPUT' type='text' class='form-control' placeholder='0105512345678' aaname='Tax ID (13 digits)' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f7a9694b-1827-43d9-9b0e-4be0d4438c9e" InformativeScreenshot="f9aa85893e57b94225cf3beda7cbe159.jpg" IsResponsive="True" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/YCBYgt9JXE6O9kco42csiA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Customer Information' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="970, 619, 130, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Tax ID (13 digits)' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Tax ID (13 digits)' /&gt;" Guid="f460296c-b34d-454a-9831-40cb4d6a972c" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generate Tax Invoice'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/customer_info.html" ContentHash="ih0RosF96ke9M31dKyBxTA" DesignTimeRectangle="782, 1016, 355, 73" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btnGenerate' tag='BUTTON' /&gt;" Guid="64caac11-1124-49f9-a10c-5c5de71a384a" InformativeScreenshot="503bb19445dfcfa09132f570fce9af9f.jpg" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/z1olfZjUxESDjrCQVUwr9w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Customer Information' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download Tax Invoice (P…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="02561402-29e4-4105-ae9b-73aa3073220e" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="localhost/customer_info.html" ContentHash="MgJ-88rlAkibYwS2-92Jew" DesignTimeRectangle="750, 1017, 419, 72" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btnDownload' tag='BUTTON' /&gt;" Guid="1ea789ff-b94f-4849-893b-c392dd714992" InformativeScreenshot="2884d2fd66b5ea58a6a5ace532dd4f52.jpg" Reference="X0xVgLdI7kW7Y_jIj4MpXQ/pX9diOrvGkO-4CEjBkT8_g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GlowSkin — Customer Information' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                      </Sequence>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                  </ActivityFunc>
+                </uix:NApplicationCard.OCREngine>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="9f2b87ab04a9419c00173e15c2ac940b.jpg" Selector="&lt;html app='chrome.exe' title='GlowSkin — Product Catalog' /&gt;" Url="http://localhost:8000/invoice_system.html" Version="V3">
+                    <uix:TargetApp.Arguments>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Arguments>
+                    <uix:TargetApp.WorkingDirectory>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.WorkingDirectory>
+                  </uix:TargetApp>
+                </uix:NApplicationCard.TargetApp>
+              </uix:NApplicationCard>
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Action="Forward" AttachmentInputMode="Existing" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;&amp;quot;เรียนฝ่ายคลังสินค้า&amp;quot; &amp;amp; Environment.NewLine &amp;amp;&#xD;&#xA;&amp;quot;กรุณาตรวจสอบใบกำกับภาษีที่แนบมาด้วย&amp;quot; &amp;amp; Environment.NewLine &amp;amp;&#xD;&#xA;&amp;quot;ลูกค้า: &amp;quot; &amp;amp; dtCustomer.Rows(2)(1).ToString&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="True" DisplayName="Send Invoice to Warehouse" Email="mintorders.glowskin@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="726.4,378.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Password="jvgb qwwb jpjx lqlo" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="[&quot;Tax Invoice - &quot; &amp; dtCustomer.Rows(0)(1).ToString]" TimeoutMS="300000" To="nutwarehouse.glowskin@gmail.com" UseISConnection="False" UseOAuth="False" UseRichTextEditor="True">
+                <ui:SendMail.AttachmentsBackup>
+                  <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+                    <usau:BackupSlot.BackupValues>
+                      <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                    </usau:BackupSlot.BackupValues>
+                  </usau:BackupSlot>
+                </ui:SendMail.AttachmentsBackup>
+                <ui:SendMail.ConnectionDetailsBackupSlot>
+                  <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+                    <usau:BackupSlot.BackupValues>
+                      <scg:List x:TypeArguments="x:Object" x:Key="IntegrationService" Capacity="1">
+                        <x:Null />
+                      </scg:List>
+                    </usau:BackupSlot.BackupValues>
+                  </usau:BackupSlot>
+                </ui:SendMail.ConnectionDetailsBackupSlot>
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+              <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;D:\project RPA\Processed\&quot; &amp; currentFile.Name]" DisplayName="Archive Processed Excel" sap:VirtualizedContainerService.HintSize="726.4,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[currentFile.FullName]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachFileX.Body>
+    </ui:ForEachFileX>
+  </Sequence>
+</Activity>
